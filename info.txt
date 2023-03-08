@@ -1,0 +1,39 @@
+23.5px per square on board
+23.5px * 8 = 188 width and height
+-78 from center of board to edge of bottom
++78 to top of board
++77 leftmost column
+-77 rightmost column
+
+22 x to move between columns
+22 y to move between rows
+
+starting board positions 
+a1 left bottom
+h8 right top
+
+WHITE:
+a1 rook (77 -78)
+b1 knight (55 -78)
+c1 bishop  (33 -78)
+d1 queen (11 -78)
+e1 king (-11 -78)
+f1 bishop (-33 -78)
+g1 knight (-55 -78)
+h1 rook (-77 -78)
+a2 - h2 pawn (77 -56) (55 -56) (33 -56) (11 -56) (-11 -56) (-33 -56) (-55 -56) (-77 -56)
+
+BLACK:
+a7 - h7 pawn (77 54) (55 54) (33 54) (11 54) (-11 54) (-33 54) (-55 54) (-77 54)
+a8 rook (77 78)
+b8 knight (55 78)
+c8 bishop (33 78)
+d8 queen (11 78)
+e8 king (-11 78)
+f8 bishop (-33 78)
+g8 knight (-55 78)
+h8 rook (-77 78)
+
+Mouse x from 0 - 180
+
+Mouse y from 0 - 183
