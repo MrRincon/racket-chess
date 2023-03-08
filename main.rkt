@@ -72,25 +72,28 @@
 
     (define/private mousePosHandler (lambda (x y)
         (cond
-            [(<= x 22.5) (displayln "COL A")]
-            [(and (<= x 45) (> x 22.5)) (display "COL B ")]
-            [(and (<= x 67.5) (> x 45)) (display "COL C ")]
-            [(and (<= x 90) (> x 67.5)) (display "COL D ")]
-            [(and (<= x 112.5) (> x 90)) (display "COL E ")]
-            [(and (<= x 135) (> x 112.5)) (display "COL F ")]
-            [(and (<= x 157.5) (> x 135)) (display "COL G ")]
-            [(> x 157.5) (displayln "COL H")]
+            [(and (> x 0) (<= x 180) (> y 0) (<= y 183)) (cond
+                [(and (>= x 0) (<= x 22.5)) (display "COL A")]
+                [(and (<= x 45) (> x 22.5)) (display "COL B ")]
+                [(and (<= x 67.5) (> x 45)) (display "COL C ")]
+                [(and (<= x 90) (> x 67.5)) (display "COL D ")]
+                [(and (<= x 112.5) (> x 90)) (display "COL E ")]
+                [(and (<= x 135) (> x 112.5)) (display "COL F ")]
+                [(and (<= x 157.5) (> x 135)) (display "COL G ")]
+                [(and (<= x 180)(> x 157.5)) (display "COL H")]
+            )
+            (cond
+                [(and (>= y 0)(<= y 22.875)) (displayln "ROW 8")]
+                [(and (<= y 45.75) (> y 22.875)) (displayln "ROW 7")]
+                [(and (<= y 68.625) (> y 45.75)) (displayln "ROW 6")]
+                [(and (<= y 91.5) (> y 68.625)) (displayln "ROW 5")]
+                [(and (<= y 114.375) (> y 91.5)) (displayln "ROW 4")]
+                [(and (<= y 137.25) (> y 114.375)) (displayln "ROW 3")]
+                [(and (<= y 160.125) (> y 137.25)) (displayln "ROW 2")]
+                [(and (<= y 183)(> y 160.125)) (displayln "ROW 1")]
+            )]
         )
-        (cond
-            [(<= y 22.875) (displayln "ROW 8")]
-            [(and (<= y 45.75) (> y 22.875)) (displayln "ROW 7")]
-            [(and (<= y 68.625) (> y 45.75)) (displayln "ROW 6")]
-            [(and (<= y 91.5) (> y 68.625)) (displayln "ROW 5")]
-            [(and (<= y 114.375) (> y 91.5)) (displayln "ROW 4")]
-            [(and (<= y 137.25) (> y 114.375)) (displayln "ROW 3")]
-            [(and (<= y 160.125) (> y 137.25)) (displayln "ROW 2")]
-            [(> y 160.125) (displayln "ROW 1")]
-        )
+        
     ))
 ))
 
