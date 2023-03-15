@@ -127,6 +127,9 @@
                         [(equal? foundNextPiece #f)
                             (updateBoard (append (remove foundFirstPiece boardState) (list (piecePos (piecePos-piece foundFirstPiece) column row))))
                         ]
+                        ;this cond will make sure that the piece being captured is only pieces from the other team(opposite colour)
+                        [(equal? (piece-color(piecePos-piece foundFirstPiece))(piece-color(piecePos-piece foundNextPiece))) #f]
+                        
                         [#t (updateBoard (append (remove foundNextPiece (remove foundFirstPiece boardState)) (list (piecePos (piecePos-piece foundFirstPiece) column row))))]
                     )
                 )
