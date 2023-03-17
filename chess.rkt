@@ -9,7 +9,7 @@
 (require "chessstate.rkt")
 
 ;define a path to the image folder in which sprites are contained for easy use later
-(define imgFolder (path->string (build-path (current-directory) "racket-chess\\sprites")))
+(define imgFolder (path->string (build-path (current-directory) "sprites")))
 ;we create a frame
 (define root (new frame% [label "Chess"][width 194][height 218]))
 
